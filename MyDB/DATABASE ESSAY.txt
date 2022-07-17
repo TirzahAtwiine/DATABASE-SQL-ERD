@@ -1,0 +1,44 @@
+DATABASE ESSAY
+This database keeps a record of different anime, the characters in the anime and the voice actors of the different anime. There are four tables in this database namely; 
+1. Anime
+2. Voice_actors
+3. Characters
+And lastly Japanese. The first three tables stated above have something in common and that is Japanese. Anime has subtitles written in Japanese while the voice actors speak in japanese and so do the characters in the different animes. Therefore, these different tables are joined by the table called Japanese.
+The tables consists of different columns containing different kinds of data
+They include;
+1. Anime table
+This includes four columns with one of them being the primary key i.e.;
+Id
+Anime_title
+Rating 
+ And release year
+These columns have different data types and they include; integer, text, integer and integer respectively. the id column is considered the primary key.
+
+2. Voice_actors table
+This table includes four columns with one of them being the primary key i.e.;
+Id
+Name
+Dob
+Age
+These columns have different data types and they include; integer, text, integer, and integer respectively. The id column is the primary key.
+
+3. Characters table
+This table includes only three columns with one of them being a primary key (uniquely identifying each record) i.e.;
+Id
+Name
+C_age
+These columns have different data types and they include; integer, text, integer respectively. The id column is the primary key.
+And then finally we have the last column in the table which is known as the
+
+
+4. Japanese table
+This table is the joining table of all the other three tables in the database. It is considered the middle man and is mostly used when data is to be retrieved from two or more tables. 
+It consists of four columns which include;
+Id
+Anime_id
+Voice_actors_id
+Characters_id 
+These columns have the same data type which is integer.
+The column id is the one that uniquely identifies the records in this table.
+
+

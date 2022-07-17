@@ -1,0 +1,17 @@
+Query to show titles of anime where the voice actor named Mamoru Miyano acted
+sqlite> SELECT anime_title from anime
+   ...> JOIN japanese ON japanese.anime_id=anime.id
+   ...> JOIN voice_actors ON voice_actors.id=japanese.voice_actors_id
+   ...> WHERE voice_actors.name LIKE"%Mamoru Miyano%";
+Query to show the names of the voice actor who acted in the anime called One piece
+sqlite> SELECT name FROM voice_actors
+   ...> JOIN japanese ON japanese.voice_actors_id=voice_actors.id
+   ...> JOIN anime ON anime.id=japanese.anime_id
+   ...> WHERE anime. anime_title LIKE "%One piece%";
+Query to show the names of characters in the anime Kuroko’s basketball
+SELECT name FROM characters WHERE id IN( SELECT id FROM anime WHERE anime_title LIKE "%Kuroko's Basketball%")
+Query to show ten anime titles and the number of times they appear in the database in a descending order
+SELECT anime_title, COUNT(anime_title) FROM anime GROUP BY anime_title ORDER BY COUNT(anime_title) DESC Limit 10;
+Query to show all the information in the characters table
+SELECT * FROM characters
+
